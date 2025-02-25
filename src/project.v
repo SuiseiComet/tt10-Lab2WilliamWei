@@ -18,9 +18,9 @@ module tt_um_project (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-always @(en, ui_in) 
+always @(ena, ui_in) 
     begin
-    if (en == 1) 
+    if (ena == 1) 
         begin
         
         // All output pins must be assigned. If not used, assign to 0.

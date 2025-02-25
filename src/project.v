@@ -19,7 +19,7 @@ module tt_um_project (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-    if (In[15] == 1) uo_out = 8'b0000_1111;
+if (In[15] == 1) uo_out = 8'b0000_1111;
     else if (In[14] == 1) assign uo_out = 8'b0000_1110;
     else if (In[13] == 1) assign uo_out = 8'b0000_1101;
     else if (In[12] == 1) assign uo_out = 8'b0000_1100;

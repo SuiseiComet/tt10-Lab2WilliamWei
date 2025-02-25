@@ -36,7 +36,7 @@ always @(ena, ui_in)
             else if (ui_in[5]  == 1) uo_out = 8'b00000101;
             else if (ui_in[4]  == 1) uo_out = 8'b00000100;
             else if (ui_in[3]  == 1) uo_out = 8'b00000011;
-            else if (ui_in[2]  == 1) Cuo_out= 8'b00000010;
+            else if (ui_in[2]  == 1) uo_out = 8'b00000010;
             else if (ui_in[1]  == 1) uo_out = 8'b00000001;
             else if (ui_in[0]  == 1) uo_out = 8'b00000000;
             else uo_out = 8'b00000000;

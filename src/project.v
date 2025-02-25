@@ -31,7 +31,7 @@ always @(en, ui_in)
             assign uo_out = 8'b0000_0000;
         end
     end
-    else uo_out = 8'zzzz_zzzz;
+    else uo_out = 8'bzzzz_zzzz;
 end
   assign uio_out = 0;
   assign uio_oe  = 0;

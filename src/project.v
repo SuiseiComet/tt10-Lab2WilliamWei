@@ -22,7 +22,9 @@ module tt_um_project (
     if (ui_in[15] == 1) begin
         uo_out = 8'b0000_1111;
     end
-
+    else begin
+        uo_out = 8'b0000_0000;
+    end
 
   assign uio_out = 0;
   assign uio_oe  = 0;

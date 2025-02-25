@@ -25,10 +25,10 @@ always @(ena, ui_in)
         
         // All output pins must be assigned. If not used, assign to 0.
         if (ui_in[15] == 1) begin
-            assign uo_out = 8'b0000_1111;
+            uo_out = 8'b0000_1111;
         end
         else begin
-            assign uo_out = 8'b0000_0000;
+            uo_out = 8'b0000_0000;
         end
     end
     else uo_out = 8'bzzzz_zzzz;

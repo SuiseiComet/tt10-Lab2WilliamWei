@@ -7,7 +7,6 @@
 
 module tt_um_project (
     input  wire [15:0] ui_in,     // Dedicated inputs
-    input  wire [7:0] uio_in,   // IOs: Input path
     
     output reg [7:0] uo_out,   // Dedicated outputs
     output wire [7:0] uio_out,  // IOs: Output path
@@ -33,6 +32,6 @@ end
   assign uio_in = 0;
 
   // List all unused inputs to prevent warnings
-wire _unused = &{uio_in, ena, clk, rst_n, 1'b0};
+wire _unused = &{ena, clk, rst_n, 1'b0};
 
 endmodule

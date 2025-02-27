@@ -82,6 +82,48 @@ async def test_project(dut):
 
     assert dut.uo_out.value == 6
 
+    dut.ui_in.value = 0b00000000
+    dut.uio_in.value = 0b11110101
+
+    await ClockCycles(dut.clk, 1)
+
+    assert dut.uo_out.value == 7
+
+    dut.ui_in.value = 0b00000001
+    dut.uio_in.value = 0b11110101
+
+    await ClockCycles(dut.clk, 1)
+
+    assert dut.uo_out.value == 8
+
+    dut.ui_in.value = 0b00000011
+    dut.uio_in.value = 0b01010011
+
+    await ClockCycles(dut.clk, 1)
+
+    assert dut.uo_out.value == 9
+
+    dut.ui_in.value = 0b00000111
+    dut.uio_in.value = 0b01110101
+
+    await ClockCycles(dut.clk, 1)
+
+    assert dut.uo_out.value == 10
+
+    dut.ui_in.value = 0b00001111
+    dut.uio_in.value = 0b01110101
+
+    await ClockCycles(dut.clk, 1)
+
+    assert dut.uo_out.value == 11
+
+    dut.ui_in.value = 0b00011111
+    dut.uio_in.value = 0b01110101
+
+    await ClockCycles(dut.clk, 1)
+
+    assert dut.uo_out.value == 12
+
     dut.ui_in.value = 0b00101010
     dut.uio_in.value = 0b11110001
 
@@ -89,16 +131,18 @@ async def test_project(dut):
 
     assert dut.uo_out.value == 13
 
-    dut.ui_in.value = 0b00000000
-    dut.uio_in.value = 0b00000000
+    dut.ui_in.value = 0b01101010
+    dut.uio_in.value = 0b01110101
 
     await ClockCycles(dut.clk, 1)
 
-    assert dut.uo_out.value == 0b11110000
-
-    dut.ui_in.value = 0b00000010
-    dut.uio_in.value = 0b01010011
+    assert dut.uo_out.value == 14
+    
+    dut.ui_in.value = 0b10000000
+    dut.uio_in.value = 0b01110101
 
     await ClockCycles(dut.clk, 1)
 
-    assert dut.uo_out.value == 9
+    assert dut.uo_out.value == 15
+
+
